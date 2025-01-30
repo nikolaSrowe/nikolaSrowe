@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-content">
         <h1 className="hero-title">
-          Hi, I'm <span className="highlight">[Your Name]</span>
+        01101000 01101001 <p>{"(thats hi in binary)"}</p>  <span className="highlight">[Your Name]</span>
         </h1>
         <p className="hero-description">
           nvnwenofiv nkevnewn awfnpoen <span className="typing">Computer Science Student</span>
@@ -14,7 +14,6 @@ const Hero = () => {
       </div>
       <div className="hero-animation">
         {/* Add any SVG, animated elements, or images here */}
-        <div className="floating-box"></div>
       </div>
     </section>
   );

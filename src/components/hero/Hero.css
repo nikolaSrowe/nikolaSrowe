@@ -11,10 +11,11 @@ html, body {
   padding: 2rem 1rem;
   height: 100vh;
   width: 100%; /* Ensure it spans the full width */
-  background: linear-gradient(135deg, #515c4b, #36393e);
-  color: #d4d4d8;
+  color: #ebeaf1;
   overflow: hidden; /* Prevent scrollbars from appearing */
 }
+
+
 
 .hero-content {
   max-width: 600px;
@@ -27,7 +28,7 @@ html, body {
 }
 
 .highlight {
-  color: #6bbf59;
+  color: #f1f1f0;
 }
 
 .hero-description {
@@ -69,26 +70,5 @@ html, body {
   height: 300px;
 }
 
-.floating-box {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 0%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for box size */
-  width: 550px; /* Updated width */
-  height: 375px; /* Updated height */
-  background: #6bbf59;
-  border-radius: 10px;
-  animation: float 8s ease-in-out infinite;
-}
 
-@keyframes float {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(-50%, -100px); /* Bobbing within the viewport */
-  }
-  100% {
-    transform: translate(-50%, -50%);
-  }
-}
+
