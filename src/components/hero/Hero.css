@@ -1,0 +1,94 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  height: 100vh;
+  width: 100%; /* Ensure it spans the full width */
+  background: linear-gradient(135deg, #515c4b, #36393e);
+  color: #d4d4d8;
+  overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #6bbf59;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.typing {
+  color: #acbf8e;
+  font-weight: bold;
+  border-right: 2px solid #acbf8e;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 3s steps(20, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+      border-color: transparent;
+  }
+  to {
+      border-color: #acbf8e;
+  }
+}
+
+.hero-animation {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.floating-box {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 0%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for box size */
+  width: 550px; /* Updated width */
+  height: 375px; /* Updated height */
+  background: #6bbf59;
+  border-radius: 10px;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -100px); /* Bobbing within the viewport */
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

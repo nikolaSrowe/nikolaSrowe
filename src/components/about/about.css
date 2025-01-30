@@ -1,0 +1,122 @@
+.about__container {
+    grid-template-columns: 3fr 9fr; 
+    column-gap: 1.875rem;
+}
+
+/*NEW*/
+.about__image {
+    width: 100%;
+    border-radius: var(border-radius);
+    object-fit: cover;
+}
+
+.about__data {
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.875rem;
+    align-items: flex-start;
+    position: relative;
+}
+
+.about__data::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid var(--container-color);
+    position: absolute;
+    left: -0.93rem;
+    top: 20%;
+}
+
+/*NEW*/
+.about__info{
+    margin-bottom: 1rem;
+}
+
+.about__description {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.about__skills {
+    /*NEW 1*/
+    display: grid;
+    row-gap: 1.25rem;
+}
+
+.skills__titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills__number {
+    line-height: 1.2;
+}
+
+.skills__bar, 
+.skills__percentage {
+    height: 7px;
+    border-radius: 0.25rem;
+}
+
+.skills__bar {
+    background-color: #f1f1f1;
+}
+
+.skills__percentage {
+    display: block; 
+}
+
+.development {
+    width: 90%;
+    background-color: rgb(165, 189, 150);
+}
+
+.programming {
+    width: 80%;
+    background-color: #A0937D;
+}
+
+.artistic {
+    width: 70%;
+    background-color: rgb(107, 131, 92);
+}
+
+.about__boxes {
+    /*NEW 2*/
+    display: flex;
+    justify-content: center;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    gap: 1.875rem;
+    margin-top: 4.35rem;
+}
+
+.about__box {
+    display: flex;
+    /*BEFORE added: column-gap: 1.5rem;*/
+    /*NEW 2*/
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    padding: 1rem;
+}
+
+about__icon {
+    font-size: var(--h1-font-size);
+    color: #dedeea;
+}
+
+.about__title {
+    font-size: 1.875rem;
+}
