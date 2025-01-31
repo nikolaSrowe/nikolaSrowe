@@ -1,46 +1,114 @@
-.aside {
+/* Navbar Container */
+.navbar {
     position: fixed;
-    left: 0;
     top: 0;
-    background: transparent; /* Fully transparent */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for visibility */
-    padding: 0 1rem;
+    left: 0;
     width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    z-index: 1000; /* Ensure navbar is above other content */
+  }
+  
+  /* Navbar Inner Container */
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     height: 60px;
     display: flex;
-    flex-direction: row; /* Keep navbar elements horizontal */
+    justify-content: space-between;
     align-items: center;
-    z-index: 10;
-}
-
-/* Ensures the navbar content stays centered and aligned properly */
-.sidebar-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Navbar items stay in a row */
-.nav__list {
-    display: flex;
-    flex-direction: row; /* Ensures elements stay horizontal */
-    justify-content: center;
-    align-items: center;
-    column-gap: 3rem; /* Increased space between items */
-    padding: 0 1rem; /* Added padding for better spacing */
-}
-
-/* Navbar links with better visibility on transparent background */
-.nav__link {
+  }
+  
+  /* Logo */
+  .navbar-logo .logo-text {
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.85); /* Lightened color for visibility */
-    font-weight: var(--font-bold);
+    font-weight: bold;
+    color: #333; /* Dark text color */
+  }
+  
+  /* Desktop Navigation Links */
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    color: #333; /* Dark text color */
+    font-weight: 500;
     transition: color 0.3s;
-    padding: 0.5rem 1rem; /* Increased padding for better clickability */
-}
-
-/* Hover effect to enhance contrast */
-.nav__link:hover {
-    color: #acbf8e;
-}
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: #007bff; /* Highlight color on hover */
+  }
+  
+  .nav-link.active {
+    color: #007bff; /* Active section color */
+  }
+  
+  /* Mobile Menu Toggle */
+  .mobile-menu-toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+  }
+  
+  .mobile-menu-toggle .icon {
+    width: 24px;
+    height: 24px;
+    color: #333; /* Dark text color */
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .mobile-nav-link {
+    font-size: 1rem;
+    color: #333; /* Dark text color */
+    font-weight: 500;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+  
+  .mobile-nav-link:hover {
+    color: #007bff; /* Highlight color on hover */
+  }
+  
+  .mobile-nav-link.active {
+    color: #007bff; /* Active section color */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none; /* Hide desktop links on mobile */
+    }
+  
+    .mobile-menu-toggle {
+      display: block; /* Show mobile menu toggle */
+    }
+  
+    .mobile-nav {
+      display: flex; /* Show mobile navigation when open */
+    }
+  }

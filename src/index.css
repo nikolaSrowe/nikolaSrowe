@@ -2,22 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /*=============== Variables CSS ===============*/
-:root{
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: #96A366;
-  /*#ACC18A*/
-  --title-color: #D4D4D8;
-  /*#605B56*/
-  --text-color: #837A75;
-  /* BEFORE:*/
-  --body-color: #fdfbfb;
-  /* BEFORE: hsl(258, 60%, 98%)*/
-  --container-color:#fdfbfb ;
-  /*#fff*/
+:root {
+  /* Colors */
+  --background: hsl(220, 15%, 16%);
+  --foreground: hsl(240, 33%, 95%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(240, 33%, 95%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(240, 33%, 95%);
+  --primary: hsl(213, 60%, 74%);
+  --primary-foreground: hsl(240, 5.9%, 10%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(240, 33%, 95%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --accent: hsl(196, 68%, 93%);
+  --accent-foreground: hsl(240, 5.9%, 10%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(240, 33%, 95%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.75rem;
 
-  /*========== Font and Typography ==========*/
-  /*.5rem = 8px | 1rem = 16px*/
+  /* Fonts */
   --body-font: "Rubik", sans-serif;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
@@ -26,41 +34,16 @@
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
 
-    /*========== Font Weight ==========*/
-    --font-medium: 500;
-    --font-semibold: 600;
-    --font-bold: 700;
+  /* Font Weights */
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
 
-    /*========== Box shadow ==========*/
-    --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
-
-    /*========== Border Radius ==========*/
-    --border-radius: 20px;
+  /* Shadows */
+  --shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
 }
 
-.theme-dark {
-  --first-color: #8AACC1; 
-  --title-color: #dedeea;
-  --text-color: #c5c6c7;
-  --body-color: #333333;
-  --container-color: #444444;
-  --shadow: 0px 4px 6px rgba(20, 25, 48, 0.3);
-}
-
-/* Responsive typography */
-@media screen and (max-width: 1024px) {
-  :root {
-    --h1-font-size: 1.75rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
-
-  }
-}
-
-/*=============== Variables CSS ===============*/
+/*=============== Base Styles ===============*/
 * {
   margin: 0;
   padding: 0;
@@ -71,27 +54,21 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-button,
-input,
-textarea {
+body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-}
-
-body{
-  background-color: var(--body-color);
+  background-color: var(--background);
+  color: var(--foreground);
   line-height: 1.7;
-  color: var(--text-color);
 }
 
 h1, h2, h3 {
-  color: var(--title-color);
+  color: var(--foreground);
   font-weight: var(--font-semibold);
   line-height: 1.2;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -111,7 +88,7 @@ img {
   vertical-align: middle;
 }
 
-/*=============== VResume CSS Classes ===============*/
+/*=============== Utility Classes ===============*/
 .container {
   max-width: 1080px;
   padding-left: 15px;
@@ -150,23 +127,83 @@ img {
   padding: 0.75rem 2rem;
   line-height: 1;
   border-radius: 1.875rem;
-  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   border: 1px solid transparent;
   color: #fff;
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--primary);
   font-weight: var(--font-bold);
-
 }
+
+.btn:hover {
+  animation: button-push 0.3s linear 1;
+}
+
 @keyframes button-push {
   50% {
     transform: scale(0.8);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
-.btn:hover {
-animation: button-push 0.3s linear 1;
+/*=============== Custom Classes ===============*/
+.hover-expand {
+  transition: transform 0.3s ease;
+}
+
+.hover-expand:hover {
+  transform: scale(1.05);
+  animation: bob 1s infinite;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0) scale(1.05);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.folder-card {
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 20px 20px;
+  overflow: visible;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.folder-card::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 40%;
+  height: 15px;
+  background: inherit;
+  border-radius: 5px 5px 0 0;
+}
+
+.folder-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

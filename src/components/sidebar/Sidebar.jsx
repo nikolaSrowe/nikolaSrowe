@@ -1,63 +1,85 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react"; // Import icons for the mobile menu
 import "./sidebar.css";
 
 const Sidebar = () => {
-    return (
-        <aside className='aside'>
-            {/* Remove or comment out the logo section */}
-            {/*
-            <div className="sidebar-logo">
-                <a href="#home" className="nav__log">
-                    <img src={Logo} alt="Logo" style={{width: '50px', height: '50px', maxHeight: '50px'}} />
-                </a>
-            </div>
-            */}
+  const [isOpen, setIsOpen] = useState(false); // State for mobile menu toggle
+  const [activeSection, setActiveSection] = useState("home"); // State for active section
 
-            <div className="sidebar-content">
-                <nav className="nav">
-                    <div className="nav__menu">
-                        <ul className="nav__list">
-                            <li className="nav__item">
-                                <a href="#home" className="nav__link">
-                                    <i className="icon-home"></i>
-                                </a>
-                            </li>
+  // Handle scroll to detect active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.scrollY + 100; // Adjust for better detection
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute("id") || "";
+        if (scrollPosition >= top && scrollPosition < top + height) {
+          setActiveSection(id);
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-                            <li className="nav__item">
-                                <a href="#about" className="nav__link">
-                                    <i className="icon-user-following"></i>
-                                </a>
-                            </li>
+  // Smooth scroll to section
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // Close mobile menu after clicking a link
+    }
+  };
 
-                            <li className="nav__item">
-                                <a href="#services" className="nav__link">
-                                    <i className="icon-briefcase"></i>
-                                </a>
-                            </li>
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="navbar-logo">
+          <span className="logo-text">Portfolio</span>
+        </div>
 
-                            <li className="nav__item">
-                                <a href="#portfolio" className="nav__link">
-                                    <i className="icon-layers"></i>
-                                </a>
-                            </li>
+        {/* Desktop Navigation */}
+        <div className="navbar-links">
+          {["home", "about", "portfolio", "interests", "contact"].map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(section)}
+              className={`nav-link ${
+                activeSection === section ? "active" : ""
+              }`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          ))}
+        </div>
 
-                            <li className="nav__item">
-                                <a href="#blog" className="nav__link">
-                                    <i className="icon-note"></i>
-                                </a>
-                            </li>
+        {/* Mobile Menu Toggle */}
+        <div className="mobile-menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X className="icon" /> : <Menu className="icon" />}
+        </div>
 
-                            <li className="nav__item">
-                                <a href="#contact" className="nav__link">
-                                    <i className="icon-bubble"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </aside>
-    );
-}
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="mobile-nav">
+            {["home", "about", "portfolio", "interests", "contact"].map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className={`mobile-nav-link ${
+                  activeSection === section ? "active" : ""
+                }`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
 
 export default Sidebar;

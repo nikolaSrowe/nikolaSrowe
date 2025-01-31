@@ -1,74 +1,81 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
+/*=============== Hero Section ===============*/
 .hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: var(--background);
+  color: var(--foreground);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem 1rem;
-  height: 100vh;
-  width: 100%; /* Ensure it spans the full width */
-  color: #ebeaf1;
-  overflow: hidden; /* Prevent scrollbars from appearing */
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  overflow: hidden; /* Prevent scrollbars */
+  margin-bottom: 0; /* Remove any bottom margin */
 }
 
+/*=============== Hero Animation Container ===============*/
+.hero-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensure animation is behind the content */
+}
 
-
+/*=============== Hero Content ===============*/
 .hero-content {
-  max-width: 600px;
+  z-index: 1; /* Ensure content is above the animation */
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.2;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.highlight {
-  color: #f1f1f0;
+.hero-title .highlight {
+  color: var(--primary);
 }
 
 .hero-description {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  font-size: var(--h3-font-size);
+  color: var(--muted-foreground);
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+/*=============== Typing Animation (Optional) ===============*/
 .typing {
-  color: #acbf8e;
-  font-weight: bold;
-  border-right: 2px solid #acbf8e;
-  white-space: nowrap;
-  overflow: hidden;
   display: inline-block;
-  animation: typing 3s steps(20, end), blink 0.5s step-end infinite alternate;
+  overflow: hidden;
+  border-right: 0.15em solid var(--primary); /* Typing cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
   from {
-      width: 0;
+    width: 0;
   }
   to {
-      width: 100%;
+    width: 100%;
   }
 }
 
-@keyframes blink {
-  from {
-      border-color: transparent;
-  }
+@keyframes blink-caret {
+  from,
   to {
-      border-color: #acbf8e;
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary);
   }
 }
-
-.hero-animation {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-
-
