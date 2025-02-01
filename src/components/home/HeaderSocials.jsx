@@ -12,14 +12,22 @@ const HeaderSocials = () => {
         <i className="fa-brands fa-instagram"></i>
       </a>
 
-      {/* Placeholder for Discord */}
       <a
-        href="https://discord.com"
+        href="https://github.com/nikolaSrowe"
         className="home__socials-link"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="fa-brands fa-discord"></i>
+        <i className="fa-brands fa-github"></i>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/nikola-rowe-709515329/"
+        className="home__socials-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fa-brands fa-linkedin"></i>
       </a>
 
       <a

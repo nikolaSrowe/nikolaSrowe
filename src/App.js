@@ -1,31 +1,31 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
-import Home from './components/home/Home';
 import About from './components/about/About';
-import Services from './components/services/Services';
+import Home from './components/home/Home';
 import Portfolio from './components/portfolio/Portfolio';
+import ProjectDetails from './components/portfolio/projectdetails';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
 import Hero from './components/hero/Hero';
 
-
-
-
 function App() {
   return (
-    <>
+    <Router>
       <Sidebar />
       <main className='main'>
         <Hero />
-        <Home />
         <About />
         <Portfolio />
         <Blog />
         <Contact />
+        <Routes>
+          <Route path="/projects/:id" element={<ProjectDetails />} />
+        </Routes>
       </main>
-    </>
+    </Router>
   );
-} 
+}
 
-export default App
+export default App;

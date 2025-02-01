@@ -1,64 +1,49 @@
 import React from 'react';
 import "./about.css";
-import Image from "../../assets/cattAB.svg";
+import HeaderSocials from '../home/HeaderSocials';
 
 const About = () => {
     return (
         <section className="about container section" id='about'>
+            <div className="about__socials spaced-socials">
+                <HeaderSocials />
+            </div>
+
             <h2 className="section__title">About Me</h2>
 
-            <div className="about__container grid">
-                <img src={Image} alt="" className="about__img" />
+            <div className="about__content">
+                {/* Left: Text Content */}
+                <div className="about__text">
+                    <p className="about__description spaced">
+                        I'm a passionate CS student looking to contribute to the tech world by building technology that solves 
+                        real problems for real people. I love creating solutions that are both functional and meaningful, 
+                        finding an abstract blend of humanity and machine.
+                    </p>
+                    
+                    <p className="about__description spaced">
+                        Beyond coding, I love spending my time artistically through drawing, visual design, and reading, finding 
+                        inspiration beyond just code. My love for knowledge has drawn me to philosophy, history, and research, 
+                        seeking perspectives that push me to think beyond the obvious.
+                    </p>
+                    
+                    {/* <p className="about__description spaced">
+                        Driven by curiosity, guided by ethics, and focused on impact.
+                    </p> */}
+                </div>
 
-                <div className="about__data grid">
-                    <div className="about__info">
-                        <p className="about__description">Can we pretend that airplanes
-                            in the night sky are like shooting stars. I could really use
-                            a wish right now wish right now wish right now.</p>
-                        <a href="" className="btn">Download CV</a>
-                    </div>
-
-                    <div className="about__skills grid">
-                        <div className="skills__data">
-                            <div className="skills__titles">
-                                <h3 className="skills__name">Programming</h3>
-                                <span className="skills__number">90%</span>
-                            </div>
-
-                            <div className="skills__bar">
-                                <span className="skills__percentage development"></span>
-                            </div>
-                        </div>
-
-                        <div className="skills__data">
-                            <div className="skills__titles">
-                                <h3 className="skills__name">Applied Learning</h3>
-                                <span className="skills__number">80%</span>
-                            </div>
-
-                            <div className="skills__bar">
-                                <span className="skills__percentage programming"></span>
-                            </div>
-                        </div>
-
-                        <div className="skills__data">
-                            <div className="skills__titles">
-                                <h3 className="skills__name">Artistic Abilities</h3>
-                                <span className="skills__number">70%</span>
-                            </div>
-
-                            <div className="skills__bar">
-                                <span className="skills__percentage artistic"></span>
-                            </div>
-                        </div>
-
-
-                    </div>
+                {/* Right: Quick Facts Card */}
+                <div className="about__card">
+                    <h3 className="about__card-title">Quick Facts</h3>
+                    <ul className="about__card-list">
+                        <li><span className="icon">⌨️</span> Keeb Enthusiast</li>
+                        <li><span className="icon">📚</span> Bookworm</li>
+                        <li><span className="icon">🎨</span> UI/UX Passionate</li>
+                        <li><span className="icon">✔️</span> Never missed a semicolon</li>
+                    </ul>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default About
-
+export default About;
