@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
 import About from './components/about/About';
@@ -7,15 +7,15 @@ import Portfolio from './components/portfolio/Portfolio';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
 import Hero from './components/hero/Hero';
+import Home from './components/home/Home';
 import Bookshelf from './components/blog/Bookshelf';
 import Art from './components/blog/Art';
 import Lego from './components/blog/Collections';
-import Home from './components/home/Home';
-import ProjectPage from './components/portfolio/ProjectPage'; // Import the dynamic project page
+import ProjectPage from './components/portfolio/ProjectPage'; 
 
 function App() {
   return (
-    <Router>
+    <>
       <Sidebar />
       <main className='main'>
         <Routes>
@@ -39,7 +39,7 @@ function App() {
           <Route path="/projects/:id" element={<ProjectPage />} /> 
         </Routes>
       </main>
-    </Router>
+    </>
   );
 }
 
