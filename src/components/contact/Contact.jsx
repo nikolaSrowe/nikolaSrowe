@@ -19,7 +19,7 @@ const Contact = () => {
             {/* Contact information */}
             <div className="contact__info">
                 <p className="contact__label">Email:</p>
-                <a href="mailto:your.email@example.com" className="contact__link">
+                <a href="mailto:nsrowe14@yahoo.ca" className="contact__link">
                     nsrowe14@yahoo.ca
                 </a>
             </div>

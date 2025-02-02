@@ -99,6 +99,6 @@
     }
 
     .image-slider img:hover {
-        width: 40%; /* Adjust hover width for smaller screens */
+        width: 60%; /* Adjust hover width for smaller screens */
     }
 }

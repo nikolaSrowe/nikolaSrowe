@@ -89,7 +89,7 @@
     }
 
     .blog__thumb {
-        height: 150px; /* Fixed height for mobile to make them square */
+        height: 200px; /* Fixed height for mobile to make them square */
         overflow: hidden; /* Ensure the image fits within the square */
     }
 
