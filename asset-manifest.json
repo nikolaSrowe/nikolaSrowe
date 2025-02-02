@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nikolaSrowe/static/css/main.8fe2addf.css",
-    "main.js": "/nikolaSrowe/static/js/main.f8828e10.js",
+    "main.css": "/nikolaSrowe/static/css/main.856ee7ba.css",
+    "main.js": "/nikolaSrowe/static/js/main.c9fa8199.js",
     "static/media/gardenPic.jpg": "/nikolaSrowe/static/media/gardenPic.e06c280b96d0e8f802c6.jpg",
     "static/media/cafePic.jpg": "/nikolaSrowe/static/media/cafePic.39c61afd4694d142ae7b.jpg",
     "static/media/boatPic.jpg": "/nikolaSrowe/static/media/boatPic.ceb51c285b497140a8fc.jpg",
@@ -16,11 +16,11 @@
     "index.html": "/nikolaSrowe/index.html",
     "static/media/work-1.svg": "/nikolaSrowe/static/media/work-1.25b5c498afc78c60e9fa29dcc2230190.svg",
     "static/media/dots-bg.svg": "/nikolaSrowe/static/media/dots-bg.50088ed34770b297f501.svg",
-    "main.8fe2addf.css.map": "/nikolaSrowe/static/css/main.8fe2addf.css.map",
-    "main.f8828e10.js.map": "/nikolaSrowe/static/js/main.f8828e10.js.map"
+    "main.856ee7ba.css.map": "/nikolaSrowe/static/css/main.856ee7ba.css.map",
+    "main.c9fa8199.js.map": "/nikolaSrowe/static/js/main.c9fa8199.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fe2addf.css",
-    "static/js/main.f8828e10.js"
+    "static/css/main.856ee7ba.css",
+    "static/js/main.c9fa8199.js"
   ]
 }
