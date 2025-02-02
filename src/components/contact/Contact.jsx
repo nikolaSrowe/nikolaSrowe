@@ -1,13 +1,16 @@
 import React from 'react';
 import "./contact.css";
+import tubingPic from '../../assets/tubingPic.jpg'; 
+import gardenPic from '../../assets/gardenPic.jpg';
+import boatPic from '../../assets/boatPic.jpg';
+import cafePic from '../../assets/cafePic.jpg';
 
 const Contact = () => {
     return (
         <section className="contact container section" id='contact'>
             {/* Title and description */}
             <div className="contact__content">
-                {/* <h2 className="section__title">Let's Connect!</h2> */}
-                <h3 className="contact__title">Feel free to reach out</h3>
+                <h2 className="section__title">Let's Connect!</h2>
                 <p className="contact__details">
                     Whether you want to chat about projects, collaboration, or just say hi, I'd love to hear from you!
                 </p>
@@ -35,6 +38,14 @@ const Contact = () => {
                         GitHub
                     </a>
                 </div>
+            </div>
+
+            {/* Image Slider */}
+            <div className="image-slider">
+                <img src={tubingPic} alt="Tubing" />
+                <img src={gardenPic} alt="Garden" />
+                <img src={boatPic} alt="Boat" />
+                <img src={cafePic} alt="Cafe" />
             </div>
         </section>
     );

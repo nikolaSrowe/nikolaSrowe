@@ -1,3 +1,4 @@
+/* Existing Contact Styles */
 .contact {
     padding: 4rem 0;
     text-align: center;
@@ -7,12 +8,7 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #fff;
-}
-
-.contact__title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #fff;
+    text-align: center;
 }
 
 .contact__details {
@@ -63,10 +59,46 @@
     text-decoration: underline;
 }
 
+/* Image Slider Styles */
+.image-slider {
+    margin: 100px auto 0; /* Center the slider */
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-slider img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* border: 2px solid #fff; */
+    transition: all ease-in-out 0.5s;
+}
+
+.image-slider img:hover {
+    width: 50%;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .social__links {
         flex-direction: column;
         align-items: center;
+    }
+
+    .image-slider {
+        width: 90%; /* Adjust for smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .image-slider img {
+        width: 20%; /* Adjust image width for smaller screens */
+    }
+
+    .image-slider img:hover {
+        width: 40%; /* Adjust hover width for smaller screens */
     }
 }
