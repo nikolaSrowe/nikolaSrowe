@@ -1,0 +1,26 @@
+/* ProjectPage.css */
+.project-page {
+    padding: 20px;
+    text-align: center;
+    padding-top: 80px; /* Add padding to lower content below the navbar */
+}
+
+.back-button {
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #005f8b;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #f0f0f0; /* Lighter color (closer to white) */
+    margin-top: 20px;
+}

@@ -6,11 +6,12 @@ import About from './components/about/About';
 import Portfolio from './components/portfolio/Portfolio';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
-import Home from './components/home/Home';
 import Hero from './components/hero/Hero';
-import Bookshelf from './components/blog/Bookshelf'; // Import the new pages
+import Bookshelf from './components/blog/Bookshelf';
 import Art from './components/blog/Art';
 import Lego from './components/blog/Collections';
+import Home from './components/home/Home';
+import ProjectPage from './components/portfolio/ProjectPage'; // Import the dynamic project page
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Sidebar />
       <main className='main'>
         <Routes>
-          {/* Main page with all sections */}
+          {/* Main Page - Includes All Sections */}
           <Route path="/" element={
             <>
               <Hero />
@@ -28,10 +29,14 @@ function App() {
               <Contact />
             </>
           } />
-          {/* Separate routes for blog pages */}
+
+          {/* Blog/Interests Routes */}
           <Route path="/bookshelf" element={<Bookshelf />} />
           <Route path="/art" element={<Art />} />
           <Route path="/lego" element={<Lego />} />
+
+          {/* Dynamic Project Route */}
+          <Route path="/projects/:id" element={<ProjectPage />} /> 
         </Routes>
       </main>
     </Router>
