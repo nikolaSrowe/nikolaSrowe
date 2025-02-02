@@ -57,7 +57,18 @@
     color: #8b88b1;
 }
 
-.blog__dot {
-    font-weight: var(--font-bold);
+
+.back-button {
+    background-color: #bf4341;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
+.back-button:hover {
+    background-color: #a03735;
+}

@@ -1,0 +1,167 @@
+/* General Page Styles */
+.bookshelf-page {
+    max-width: 1200px; /* Increased for better spacing */
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Back Button */
+.back-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Book Grid - Now 5 Books Per Row */
+.bookshelf-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five books per row */
+    gap: 1.5rem;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+/* Book Card - Wider & Bigger */
+.book-card {
+    background: white;
+    padding: 1.5rem; /* More padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 240px; /* Increased width */
+    min-width: 220px;
+    width: 100%;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Image - Taller for Proportion */
+.book-img {
+    width: 100%;
+    height: 320px; /* Taller images */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Book Title */
+.book-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* Book Author */
+.book-author {
+    font-size: 1rem;
+    color: #4e4e4e;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+/* Book Rating */
+.book-rating {
+    font-size: 1rem;
+    color: gold;
+}
+
+/* Review Pop-up Modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Modal Author */
+.modal-author {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.modal p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Close Button */
+.close-button {
+    margin-top: 1rem;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1400px) {
+    .bookshelf-grid {
+        grid-template-columns: repeat(4, 1fr); /* Four books per row on slightly smaller screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .bookshelf-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three books per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .bookshelf-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two books per row on tablets */
+    }
+}
+
+@media (max-width: 500px) {
+    .bookshelf-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+    }
+}

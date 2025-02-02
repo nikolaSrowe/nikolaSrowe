@@ -1,0 +1,62 @@
+/* General Page Styling */
+.art-page {
+    padding: 20px;
+    text-align: center;
+    padding-top: 80px; /* Add padding to lower content below the navbar */
+}
+
+/* Back Button Styling */
+.back-button {
+    background-color: #9ec1ed;
+    color: #656464;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative; /* Ensure it stays in the flow */
+    z-index: 1; /* Ensure it's above other elements if needed */
+}
+
+.back-button:hover {
+    background-color: #729ed4;
+    color: white;
+}
+
+/* Title and Description */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f0f0f0; /* Lighter color (closer to white) */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #e0e0e0; /* Lighter color (closer to white) */
+    margin-bottom: 30px;
+}
+
+/* Art Gallery Grid - 2 Images Per Row */
+.art-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 images per row */
+    gap: 20px; /* Space between images */
+    padding: 20px;
+    justify-content: center; /* Center the grid */
+    align-items: center; /* Align images properly */
+}
+
+/* Art Image Styling */
+.art-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .art-gallery {
+        grid-template-columns: 1fr; /* Switch to 1 image per row on smaller screens */
+    }
+}

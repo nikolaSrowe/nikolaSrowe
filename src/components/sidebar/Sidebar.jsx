@@ -38,7 +38,7 @@ const Sidebar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <span className="logo-text">Portfolio</span>
+          <span className="logo-text">Nikola R.</span>
         </div>
 
         {/* Desktop Navigation */}
