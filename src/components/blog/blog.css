@@ -81,29 +81,45 @@
     color: #8b88b1;
 }
 
+.back-button {
+    background-color: #9ec1ed;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e7b4c4;
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .blog__container {
-        grid-template-columns: 1fr; /* Single column for mobile */
-        row-gap: 1.5rem; /* Add spacing between stacked cards */
+        grid-template-columns: 1fr; 
+        row-gap: 1.5rem; 
     }
 
     .blog__thumb {
-        height: 200px; /* Fixed height for mobile to make them square */
-        overflow: hidden; /* Ensure the image fits within the square */
+        height: 150px; 
+        overflow: hidden; 
     }
 
     .blog__img {
         width: 100%;
-        height: 100%; /* Fill the container */
-        object-fit: cover; /* Ensure the image covers the square */
+        height: 100%; 
+        object-fit: cover; 
     }
 
     .blog__title {
-        font-size: 1.1rem; /* Slightly smaller title for mobile */
+        font-size: 1.1rem; 
     }
 
     .blog__meta {
-        font-size: 0.8rem; /* Slightly smaller meta text for mobile */
+        font-size: 0.8rem; 
     }
 }

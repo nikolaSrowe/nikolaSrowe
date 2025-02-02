@@ -1,14 +1,15 @@
 /* General Page Styles */
 .bookshelf-page {
-    max-width: 1200px; /* Increased for better spacing */
+    max-width: 1200px;
     margin: auto;
     padding: 2rem;
     text-align: center;
+    padding-top: 80px;
 }
 
 /* Back Button */
 .back-button {
-    background-color: var(--primary);
+    background-color: #9ec1ed;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -20,10 +21,10 @@
 }
 
 .back-button:hover {
-    background-color: var(--primary-dark);
+    background-color: #e7b4c4;
 }
 
-/* Book Grid - Now 5 Books Per Row */
+/* Book Grid */
 .bookshelf-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Five books per row */
@@ -32,52 +33,35 @@
     padding-top: 1rem;
 }
 
-/* Book Card - Wider & Bigger */
+/* Book Card - Simplified */
 .book-card {
-    background: white;
-    padding: 1.5rem; /* More padding for better spacing */
+    background: transparent; /* No background */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 240px; /* Increased width */
-    min-width: 220px;
-    width: 100%;
+    transition: transform 0.3s ease;
+    width: 100%; /* Full width of the grid cell */
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove shadow */
 }
 
 .book-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Book Image - Taller for Proportion */
+/* Book Image - Fills the card */
 .book-img {
     width: 100%;
-    height: 320px; /* Taller images */
-    object-fit: cover;
-    border-radius: 5px;
+    height: auto; /* Retain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the space */
 }
 
-/* Book Title */
-.book-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-}
-
-/* Book Author */
-.book-author {
-    font-size: 1rem;
-    color: #4e4e4e;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-}
-
-/* Book Rating */
+/* Book Rating - Below the image */
 .book-rating {
     font-size: 1rem;
     color: gold;
+    margin-top: 0.5rem; /* Spacing between image and rating */
+    text-align: center;
 }
 
 /* Review Pop-up Modal */
@@ -144,19 +128,19 @@
 /* Responsive Adjustments */
 @media (max-width: 1400px) {
     .bookshelf-grid {
-        grid-template-columns: repeat(4, 1fr); /* Four books per row on slightly smaller screens */
+        grid-template-columns: repeat(4, 1fr); /* Four books per row */
     }
 }
 
 @media (max-width: 1024px) {
     .bookshelf-grid {
-        grid-template-columns: repeat(3, 1fr); /* Three books per row on medium screens */
+        grid-template-columns: repeat(3, 1fr); /* Three books per row */
     }
 }
 
 @media (max-width: 768px) {
     .bookshelf-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two books per row on tablets */
+        grid-template-columns: repeat(2, 1fr); /* Two books per row */
     }
 }
 
