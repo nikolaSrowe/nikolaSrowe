@@ -11,11 +11,9 @@ const Blog = () => {
             <h2 className="section__title">Hobbies</h2>
 
             <div className="blog__container grid">
-                <div className="blog__card">
+                <Link to="/bookshelf" className="blog__card"> {/* Make entire card a link */}
                     <div className="blog__thumb">
-                        <Link to="/bookshelf"> {/* Use Link instead of <a> */}
-                            <img src={Image1} alt="" className="blog__img" />
-                        </Link>
+                        <img src={Image1} alt="" className="blog__img" />
                     </div>
                     <div className="blog__details">
                         <h3 className="blog__title">My Bookshelf</h3>
@@ -23,13 +21,11 @@ const Blog = () => {
                             <span>Reviews and Likes</span>
                         </div>
                     </div>
-                </div>
+                </Link>
 
-                <div className="blog__card">
+                <Link to="/art" className="blog__card">
                     <div className="blog__thumb">
-                        <Link to="/art"> {/* Use Link instead of <a> */}
-                            <img src={Image2} alt="" className="blog__img" />
-                        </Link>
+                        <img src={Image2} alt="" className="blog__img" />
                     </div>
                     <div className="blog__details">
                         <h3 className="blog__title">Traditional to Digital</h3>
@@ -37,21 +33,19 @@ const Blog = () => {
                             <span>From pencil and paper to pencil and iPad</span>
                         </div>
                     </div>
-                </div>
+                </Link>
 
-                <div className="blog__card">
+                <Link to="/lego" className="blog__card">
                     <div className="blog__thumb">
-                        <Link to="/lego"> {/* Use Link instead of <a> */}
-                            <img src={Image3} alt="" className="blog__img" />
-                        </Link>
+                        <img src={Image3} alt="" className="blog__img" />
                     </div>
                     <div className="blog__details">
                         <h3 className="blog__title">Lego & Pokemon Card Collection</h3>
                         <div className="blog__meta">
-                            <span>love love love building legos, puzzles and collecting</span>
+                            <span>Love building Legos, puzzles, and collecting</span>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
         </section>
     );

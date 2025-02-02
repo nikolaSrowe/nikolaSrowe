@@ -1,6 +1,19 @@
+/* General styles for all screen sizes */
+.blog.container.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
 .blog__container {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
     column-gap: 1.875rem;
+    row-gap: 1.875rem;
 }
 
 .blog__card {
@@ -9,14 +22,25 @@
     overflow: hidden;
     background: linear-gradient(150deg, #9ec1ed, #e7b4c4);
     border-radius: 5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .blog__thumb {
     position: relative;
     overflow: hidden;
+    /* No fixed height for larger screens */
 }
 
 .blog__img {
+    width: 100%;
+    height: auto; /* Retain original aspect ratio */
     transform: scale(1);
     transition: .3s;
 }
@@ -57,18 +81,29 @@
     color: #8b88b1;
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .blog__container {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        row-gap: 1.5rem; /* Add spacing between stacked cards */
+    }
 
-.back-button {
-    background-color: #bf4341;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    font-size: 1rem;
-}
+    .blog__thumb {
+        height: 150px; /* Fixed height for mobile to make them square */
+        overflow: hidden; /* Ensure the image fits within the square */
+    }
 
-.back-button:hover {
-    background-color: #a03735;
+    .blog__img {
+        width: 100%;
+        height: 100%; /* Fill the container */
+        object-fit: cover; /* Ensure the image covers the square */
+    }
+
+    .blog__title {
+        font-size: 1.1rem; /* Slightly smaller title for mobile */
+    }
+
+    .blog__meta {
+        font-size: 0.8rem; /* Slightly smaller meta text for mobile */
+    }
 }
