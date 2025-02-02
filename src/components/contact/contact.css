@@ -1,49 +1,72 @@
-.contact.section {
-    padding-bottom: 6.25rem;
+.contact {
+    padding: 4rem 0;
+    text-align: center;
 }
 
-.contact__container {
-    grid-template-columns: 4fr 8fr;
-    column-gap: 1.875rem;
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
 .contact__title {
-    font-size: var(--h3-font-size);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contact__details {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.contact__info {
+    margin-bottom: 1.5rem;
+}
+
+.contact__label {
+    font-size: 1rem;
+    color: #555;
     margin-bottom: 0.5rem;
 }
 
-.contact__form-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
+.contact__link {
+    font-size: 1rem;
+    color: #0073b1;
+    text-decoration: none;
 }
 
-.contact__form-div {
-    position: relative;
-    margin-bottom: 1.875rem;
-    height: 3.75rem;
+.contact__link:hover {
+    text-decoration: underline;
 }
 
-.contact__form-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: var(--shadow);
-    background-color: var(--container-color);
-    color: var(--text-color);
-    border: none;
-    outline: none;
-    border-radius: 1.875rem;
-    padding: 0.625rem 1.875rem;
-    z-index: 1;
+.contact__socials {
+    margin-top: 1.5rem;
 }
 
-.contact__form-area {
-    height: 10.25rem;
+.social__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.contact__form-area textarea{
-    resize: none;
+.social__link {
+    font-size: 1rem;
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.social__link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social__links {
+        flex-direction: column;
+        align-items: center;
+    }
 }

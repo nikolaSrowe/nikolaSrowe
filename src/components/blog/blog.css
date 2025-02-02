@@ -7,6 +7,8 @@
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
     overflow: hidden;
+    background: linear-gradient(150deg, #9ec1ed, #e7b4c4);
+    border-radius: 5%;
 }
 
 .blog__thumb {

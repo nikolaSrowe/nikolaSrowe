@@ -2,39 +2,42 @@ import React from 'react';
 import "./contact.css";
 
 const Contact = () => {
-    return(
-        <section className="contact container section"id='contact'>
-            <h2 className="section__title">Get in Touch with me(or touch me)</h2>
+    return (
+        <section className="contact container section" id='contact'>
+            {/* Title and description */}
+            <div className="contact__content">
+                {/* <h2 className="section__title">Let's Connect!</h2> */}
+                <h3 className="contact__title">Feel free to reach out</h3>
+                <p className="contact__details">
+                    Whether you want to chat about projects, collaboration, or just say hi, I'd love to hear from you!
+                </p>
+            </div>
 
-            <div className="contact__container grid">
-               <div className="contact__info">
-                    <h3 className="contact__title">Reach out about hentai and stoicism</h3>
-                    <p className="contact__details">Dont like formality? Slide into my DM's</p>
-                </div> 
+            {/* Contact information */}
+            <div className="contact__info">
+                <p className="contact__label">Email:</p>
+                <a href="mailto:your.email@example.com" className="contact__link">
+                    nsrowe14@yahoo.ca
+                </a>
+            </div>
 
-                <form action="" className="contact__form">
-                    <div className="contact__form-group">
-                        <div className="contact__form-div">
-                            <input type="text" className="contact__form-input" placeholder='Insert your name'/>
-                        </div>
-
-                        <div className="contact__form-div">
-                            <input type="instagram" className="contact__form-input" placeholder='Insert your username'/>
-                        </div>
-                    </div> 
-                    <div className="contact__form-div">
-                            <input type="text" className="contact__form-input" placeholder='Insert your subject'/>
-                        </div>
-
-                        <div className="contact__form-div contact__form-area">
-                            <textarea name="" id="" cols="30" rows="10" className='contact__form-input' placeholder='Write your message'></textarea>
-                        </div>
-
-                        <button className="btn">Send Messgae</button>  
-                </form>
+            {/* Social links */}
+            <div className="contact__socials">
+                <p className="contact__label">Find me on:</p>
+                <div className="social__links">
+                    <a href="https://www.instagram.com/nikolarowe/?igsh=amx2dnVucDM3NGk3&utm_source=qr" target="_blank" rel="noopener noreferrer" className="social__link">
+                        Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/nikola-rowe-709515329/" target="_blank" rel="noopener noreferrer" className="social__link">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/nikolaSrowe" target="_blank" rel="noopener noreferrer" className="social__link">
+                        GitHub
+                    </a>
+                </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;

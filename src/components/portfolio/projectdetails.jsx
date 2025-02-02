@@ -1,17 +1,19 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import Menu from "./Menu"; // Import projects data
+import { useParams, useNavigate } from "react-router-dom";
+import Menu from "./Menu";
 
 const ProjectDetails = () => {
     const { id } = useParams();
-    const project = Menu.find((p) => p.link.includes(id));
+    const navigate = useNavigate();
+    const project = Menu.find((p) => p.id === parseInt(id));
 
     if (!project) {
-        return <h2>Project Not Found</h2>;
+        return <h2 className="error-message">Project Not Found</h2>;
     }
 
     return (
-        <section className="project-details container section">
+        <div className="project-details">
+            <button className="back-button" onClick={() => navigate(-1)}>Back</button>
             <h2 className="section__title">{project.title}</h2>
             <img src={project.image} alt={project.title} className="project-img" />
             <p className="project-description">{project.description}</p>
@@ -21,7 +23,7 @@ const ProjectDetails = () => {
                     <li key={index}>{tech}</li>
                 ))}
             </ul>
-        </section>
+        </div>
     );
 };
 

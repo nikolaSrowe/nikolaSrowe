@@ -1,34 +1,27 @@
-import Work1 from "../../assets/work-1.svg";
-import CubeComponent from "../cube/CubeComponent";
+import Work1 from "../../assets/work-1.svg"; // Example image
 
 const Menu = [
     {
-        id: 1, 
+        id: 1,
         image: Work1,
-        title: "My Personal Website",
+        title: "Fish Animation",
         category: "Coding",
-        component: null,
-        link: "/projects/personal-website",
-        description: "A website built using React, CSS, and Three.js.",
+        description: "An animated Koi coded with Three.js, CSS, and Node.js.",
         technologies: ["React", "Three.js", "CSS"],
     },
     {
-        id: 2, 
+        id: 2,
         image: Work1,
         title: "Paintings and Drawings",
         category: "Art",
-        component: null,
-        link: "/projects/paintings-drawings",
         description: "A collection of my best paintings and drawings.",
         technologies: ["Watercolor", "Digital Art", "Sketching"],
     },
     {
-        id: 3, 
+        id: 3,
         image: Work1,
         title: "My First Cube",
-        category: "Coding", 
-        component: <CubeComponent />,
-        link: "/projects/first-cube",
+        category: "Coding",
         description: "A 3D interactive cube created with Three.js.",
         technologies: ["Three.js", "JavaScript", "3D Modeling"],
     },
