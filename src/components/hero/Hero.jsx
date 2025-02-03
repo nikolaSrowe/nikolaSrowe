@@ -114,7 +114,7 @@ const Hero = () => {
           [Nikola Rowe]
         </h1>
         <p className="hero-description">
-          <span className="typing"> your it girl & IT girl</span>
+          <span className="typing"> Your IT girl</span>
         </p>
       </div>
     </section>
