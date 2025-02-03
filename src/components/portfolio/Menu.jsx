@@ -12,8 +12,8 @@ const Menu = [
     {
         id: 2,
         image: Work1,
-        title: "Paintings and Drawings",
-        category: "Art",
+        title: "Web Design",
+        category: "Design",
         description: "A collection of my best paintings and drawings.",
         technologies: ["Watercolor", "Digital Art", "Sketching"],
     },

@@ -6,7 +6,7 @@
 }
 
 .back-button {
-    background-color: #0073b1;
+    background-color: #9ec1ed;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -16,7 +16,7 @@
 }
 
 .back-button:hover {
-    background-color: #005f8b;
+    background-color: #e7b4c4;
 }
 
 h1 {

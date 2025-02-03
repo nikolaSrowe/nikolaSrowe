@@ -12,6 +12,7 @@ import Bookshelf from './components/blog/Bookshelf';
 import Art from './components/blog/Art';
 import Lego from './components/blog/Collections';
 import ProjectPage from './components/portfolio/ProjectPage'; 
+import Skills from './components/skills/Skills';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <>
               <Hero />
               <About />
+              <Skills />
               <Portfolio />
               <Blog />
               <Contact />
