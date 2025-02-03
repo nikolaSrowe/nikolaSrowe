@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nikolaSrowe/static/css/main.f1435bf4.css",
+    "main.css": "/nikolaSrowe/static/css/main.49942f3a.css",
     "main.js": "/nikolaSrowe/static/js/main.aabf10fb.js",
     "static/media/gardenPic.jpg": "/nikolaSrowe/static/media/gardenPic.e06c280b96d0e8f802c6.jpg",
     "static/media/cafePic.jpg": "/nikolaSrowe/static/media/cafePic.39c61afd4694d142ae7b.jpg",
@@ -27,11 +27,11 @@
     "static/media/dots-bg.svg": "/nikolaSrowe/static/media/dots-bg.50088ed34770b297f501.svg",
     "static/media/css-3.svg": "/nikolaSrowe/static/media/css-3.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html-5.svg": "/nikolaSrowe/static/media/html-5.0107c93943a8f415b5db64ebb0a9d12d.svg",
-    "main.f1435bf4.css.map": "/nikolaSrowe/static/css/main.f1435bf4.css.map",
+    "main.49942f3a.css.map": "/nikolaSrowe/static/css/main.49942f3a.css.map",
     "main.aabf10fb.js.map": "/nikolaSrowe/static/js/main.aabf10fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1435bf4.css",
+    "static/css/main.49942f3a.css",
     "static/js/main.aabf10fb.js"
   ]
 }
