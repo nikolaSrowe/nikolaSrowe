@@ -16,8 +16,10 @@ const Art = () => {
             </button>
 
             {/* Title and description */}
-            <h1>My Artwork!</h1>
-            <p>Much of my love of art is directed at traditional pieces (however I'm learning digital via yt)</p>
+            <h1>My Gallery</h1>
+            <p>Much of my love of art is directed at traditional pieces as I love the works of Monet and Hokusai. 
+                After taking art history and related courses within my time in Uni I've grown to enjoy all expressions of art.
+                Here are some samples of my digital illustrations</p>
 
             {/* Art gallery */}
             <div className="art-gallery">

@@ -8,7 +8,7 @@ import Image3 from "../../assets/neko.svg";
 const Blog = () => {
     return (
         <section className="blog container section" id="interests">
-            <h2 className="section__title">Hobbies</h2>
+            <h2 className="section__title">Interests</h2>
 
             <div className="blog__container grid">
                 <Link to="/bookshelf" className="blog__card"> {/* Make entire card a link */}
@@ -30,7 +30,7 @@ const Blog = () => {
                     <div className="blog__details">
                         <h3 className="blog__title">Traditional to Digital</h3>
                         <div className="blog__meta">
-                            <span>From pencil and paper to pencil and iPad</span>
+                            <span>Pencil and paper to pencil and iPad Check out my artwork :D</span>
                         </div>
                     </div>
                 </Link>
@@ -40,9 +40,9 @@ const Blog = () => {
                         <img src={Image3} alt="" className="blog__img" />
                     </div>
                     <div className="blog__details">
-                        <h3 className="blog__title">Lego & Pokemon Card Collection</h3>
+                        <h3 className="blog__title">Collection</h3>
                         <div className="blog__meta">
-                            <span>Love building Legos, puzzles, and collecting</span>
+                            <span>Love love love building Legos (and more)</span>
                         </div>
                     </div>
                 </Link>

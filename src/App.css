@@ -12,3 +12,5 @@ html, body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%;
 }
+
+/*NOTE: the css file that affects the back button is the ProjectPage.css*/

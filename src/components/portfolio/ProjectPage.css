@@ -6,17 +6,39 @@
 }
 
 .back-button {
-    background-color: #9ec1ed;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between arrow and text */
+    background: rgba(255, 255, 255, 0.15); /* Subtle glass effect */
+    backdrop-filter: blur(10px);
+    color: #f0f0f0; /* Neutral white */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px; /* More rounded */
+    font-size: 1rem;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for hover effect */
+    text-decoration: none;
+
+    position: absolute; /* Position it within the parent */
+    left: 20px; /* Align to the left */
+    top: 80px; /* Adjust so it doesn’t overlap with navbar */
 }
 
+/* Add an arrow icon */
+.back-button::before {
+    content: "←"; /* Left arrow */
+    font-size: 1rem;
+    color: #f0f0f0; /* Matches text color */
+}
+
+/* Hover Effect */
 .back-button:hover {
-    background-color: #e7b4c4;
+    background: rgba(255, 255, 255, 0.25); /* Brighter glass effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    transform: translateY(-2px);
 }
 
 h1 {

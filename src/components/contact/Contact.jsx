@@ -10,9 +10,9 @@ const Contact = () => {
         <section className="contact container section" id='contact'>
             {/* Title and description */}
             <div className="contact__content">
-                <h2 className="section__title">Let's Connect!</h2>
+                <h2 className="section__title">Say Hi!</h2>
                 <p className="contact__details">
-                    Whether you want to chat about projects, collaboration, or just say hi, I'd love to hear from you!
+                    Connect to chat about projects, collaboration, or just say hi, I'd love to hear from you!
                 </p>
             </div>
 

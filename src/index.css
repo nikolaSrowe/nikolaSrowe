@@ -106,49 +106,14 @@ img {
 }
 
 .section__title {
-  text-align: center;
+  text-align: center;  
   font-size: var(--h1-font-size);
-  margin-left: 0.875rem;
   font-weight: var(--font-bold);
-  position: relative;
   margin-bottom: 3.75rem;
-  width: 100%;
+  width: 100%;  
+  display: block;  
 }
 
-.section__title::before {
-  content: '';
-  background: url(./assets/dots-bg.svg);
-  height: 2.25rem;
-  width: 2.25rem;
-  position: absolute;
-  left: -0.875rem;
-  top: -0.875rem;
-}
-
-.btn {
-  padding: 0.75rem 2rem;
-  line-height: 1;
-  border-radius: 1.875rem;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  border: 1px solid transparent;
-  color: #fff;
-  display: inline-block;
-  background-color: var(--primary);
-  font-weight: var(--font-bold);
-}
-
-.btn:hover {
-  animation: button-push 0.3s linear 1;
-}
-
-@keyframes button-push {
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 /*=============== Custom Classes ===============*/
 .hover-expand {

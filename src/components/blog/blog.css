@@ -7,119 +7,123 @@
 .section__title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: var(--foreground);
 }
 
+/* Blog Container */
 .blog__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
     column-gap: 1.875rem;
-    row-gap: 1.875rem;
+    row-gap: 2rem; /* Added more space between rows */
+    justify-content: center;
 }
 
+/* Blog Card - More Milky Glassmorphic */
 .blog__card {
-    box-shadow: var(--shadow);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    background: linear-gradient(150deg, #9ec1ed, #e7b4c4);
-    border-radius: 5%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25); /* More milky white */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
     text-decoration: none;
     color: inherit;
+    overflow: hidden;
+    height: 340px; /* Slightly taller */
 }
 
+/* Hover effect - More opaque glass effect */
 .blog__card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+        150deg, 
+        rgba(172, 183, 237, 0.5), /* Soft Lavender Glass */
+        rgba(158, 193, 237, 0.5), /* Blue Glass */
+        rgba(229, 185, 193, 0.5)  /* Soft Pink Glass */
+    );
+    backdrop-filter: blur(20px);
 }
 
+/* Blog Thumbnail */
 .blog__thumb {
     position: relative;
+    width: 100%;
+    height: 220px; /* Taller image space */
     overflow: hidden;
-    /* No fixed height for larger screens */
+    border-radius: 10px;
 }
 
 .blog__img {
     width: 100%;
-    height: auto; /* Retain original aspect ratio */
-    transform: scale(1);
-    transition: .3s;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .blog__thumb:hover .blog__img {
     transform: scale(1.1);
 }
 
-.blog__category {
-    color: #ffff;
-    background-color: var(--first-color);
-    border-bottom-left-radius: 0.9375rem;
-    border-bottom-right-radius: 0.9375rem;
-    position: absolute;
-    top: 0;
-    left: 1.25rem;
-    font-size: var(--small-font-size);
-    display: inline-block;
-    padding: 0.125rem 0.5rem;
-    transition: .3s;
-    z-index: 1;
-}
-
+/* Blog Details */
 .blog__details {
-    background-color: var(--container-color);
-    padding: 1.25rem;
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .blog__title {
     font-size: var(--h3-font-size);
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--foreground);
 }
 
 .blog__meta {
-    display: flex;
-    column-gap: 0.6rem;
     font-size: var(--small-font-size);
-    color: #8b88b1;
+    color: var(--muted-foreground);
+    margin-top: 5px;
 }
 
-.back-button {
-    background-color: #9ec1ed;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    transition: background 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: #e7b4c4;
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
     .blog__container {
-        grid-template-columns: 1fr; 
-        row-gap: 1.5rem; 
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+
+    .blog__card {
+        height: 300px; /* Slightly shorter for medium screens */
     }
 
     .blog__thumb {
-        height: 150px; 
-        overflow: hidden; 
+        height: 190px; /* Adjusted thumbnail height */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog__container {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        row-gap: 1.5rem;
     }
 
-    .blog__img {
-        width: 100%;
-        height: 100%; 
-        object-fit: cover; 
+    .blog__card {
+        height: auto; /* Let it adjust naturally on mobile */
+    }
+
+    .blog__thumb {
+        height: 160px;
     }
 
     .blog__title {
-        font-size: 1.1rem; 
+        font-size: 1.1rem;
     }
 
     .blog__meta {
-        font-size: 0.8rem; 
+        font-size: 0.9rem;
     }
 }

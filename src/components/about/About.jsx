@@ -25,13 +25,9 @@ const About = () => {
                         inspiration beyond just code. My love for knowledge has drawn me to philosophy, history, and research, 
                         seeking perspectives that push me to think beyond the obvious.
                     </p>
-                    
-                    {/* <p className="about__description spaced">
-                        Driven by curiosity, guided by ethics, and focused on impact.
-                    </p> */}
+          
                 </div>
 
-                {/* Right: Quick Facts Card */}
                 <div className="about__card">
                     <h3 className="about__card-title">Quick Facts</h3>
                     <ul className="about__card-list">
