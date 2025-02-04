@@ -117,9 +117,7 @@ img {
 @media (max-width: 768px) {
   .section__title {
       text-align: center; /* Explicitly center */
-      font-size: var(--h2-font-size); /* Slightly smaller for mobile */
       width: 100%; /* Prevents accidental shifts */
-      display: flex; /* Helps align */
       justify-content: center; /* Ensures true centering */
       align-items: center;
   }
