@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import artw1 from "../../assets/artw_1.png"; // Import your images
-import artw2 from "../../assets/artw_2.png";
+import artw2 from "../../assets/artw_2.jpg";
 import artw3 from "../../assets/artw_3.png";
 import "./Art.css"; // Import the CSS file for styling
 
