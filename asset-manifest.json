@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nikolaSrowe/static/css/main.fe58cdad.css",
-    "main.js": "/nikolaSrowe/static/js/main.1d8b7bf2.js",
+    "main.js": "/nikolaSrowe/static/js/main.5af2c744.js",
     "static/media/gardenPic.jpg": "/nikolaSrowe/static/media/gardenPic.e06c280b96d0e8f802c6.jpg",
     "static/media/cafePic.jpg": "/nikolaSrowe/static/media/cafePic.39c61afd4694d142ae7b.jpg",
     "static/media/boatPic.jpg": "/nikolaSrowe/static/media/boatPic.ceb51c285b497140a8fc.jpg",
     "static/media/tubingPic.jpg": "/nikolaSrowe/static/media/tubingPic.b2264f195a5e4d05475f.jpg",
-    "static/media/artw_2.png": "/nikolaSrowe/static/media/artw_2.67430ec2cbbc93d09a01.png",
     "static/media/artw_1.png": "/nikolaSrowe/static/media/artw_1.ffb7821fa71aa70146f6.png",
     "static/media/artw_3.png": "/nikolaSrowe/static/media/artw_3.0a7c1d420812f1e150c5.png",
     "static/media/medit.jpg": "/nikolaSrowe/static/media/medit.06bf28e159b04d0460d4.jpg",
+    "static/media/artw_2.jpg": "/nikolaSrowe/static/media/artw_2.42117044ba3a3758a373.jpg",
     "static/media/bookshelf.svg": "/nikolaSrowe/static/media/bookshelf.33c2578ee23a303e8fdf78b4df6c2688.svg",
     "static/media/react.svg": "/nikolaSrowe/static/media/react.f57b349b4d9df56c9b48c916a8d5adfb.svg",
     "static/media/nodejs.svg": "/nikolaSrowe/static/media/nodejs.51fb0cf6ccda653f867a587bb90cc9c6.svg",
@@ -27,10 +27,10 @@
     "static/media/css-3.svg": "/nikolaSrowe/static/media/css-3.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html-5.svg": "/nikolaSrowe/static/media/html-5.0107c93943a8f415b5db64ebb0a9d12d.svg",
     "main.fe58cdad.css.map": "/nikolaSrowe/static/css/main.fe58cdad.css.map",
-    "main.1d8b7bf2.js.map": "/nikolaSrowe/static/js/main.1d8b7bf2.js.map"
+    "main.5af2c744.js.map": "/nikolaSrowe/static/js/main.5af2c744.js.map"
   },
   "entrypoints": [
     "static/css/main.fe58cdad.css",
-    "static/js/main.1d8b7bf2.js"
+    "static/js/main.5af2c744.js"
   ]
 }
