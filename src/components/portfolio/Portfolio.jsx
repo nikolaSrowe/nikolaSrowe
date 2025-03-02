@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Menu from "./Menu";
+import DeviceMockup from "./DeviceMockup";
 import "./portfolio.css";
 
 const Portfolio = () => {
     const navigate = useNavigate();
-    const [items, setItems] = useState(Menu); // State for filtering projects
+    const [items, setItems] = useState(Menu);
 
     // Filter function
     const filterItem = (categoryItem) => {
@@ -28,17 +29,28 @@ const Portfolio = () => {
                 <span className="work__item" onClick={() => filterItem("Coding")}>Coding</span>
             </div>
 
-            {/* Project Grid */}
-            <div className="work__container grid">
-                {items.map(({ id, image, title, category }) => (
-                    <div className="work__card" key={id} onClick={() => navigate(`/projects/${id}`)}>
-                        <div className="work__thumbnail">
-                            <img src={image} alt={title} className="work__img" />
-                            <div className="work__mask"></div>
+            {/* Project Grid - now a column layout */}
+            <div className="work__container">
+                {items.map(({ id, image, title, category, description, technologies, deviceType, bgColor }) => (
+                    <div className="project-card" key={id} onClick={() => navigate(`/projects/${id}`)}>
+                        <div className="project-mockup">
+                            <DeviceMockup 
+                                deviceType={deviceType || "laptop"} 
+                                image={image} 
+                                bgColor={bgColor}
+                                title={title}
+                            />
                         </div>
-                        <span className="work__category">{category}</span>
-                        <h3 className="work__title">{title}</h3>
-                        <button className="work__button">View</button>
+                        <div className="project-info">
+                            <h3 className="project-title">{title}</h3>
+                            <p className="project-category">{category}</p>
+                            <p className="project-desc">{description}</p>
+                            <div className="project-tech">
+                                {technologies.map((tech, index) => (
+                                    <span key={index} className="tech-tag">{tech}</span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>

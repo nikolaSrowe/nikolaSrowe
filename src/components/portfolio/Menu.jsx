@@ -8,6 +8,8 @@ const Menu = [
         category: "Coding",
         description: "An animated Koi coded with Three.js, CSS, and Node.js.",
         technologies: ["React", "Three.js", "CSS"],
+        deviceType: "laptop",
+        bgColor: "#f5f5f5",
     },
     {
         id: 2,
@@ -16,6 +18,8 @@ const Menu = [
         category: "Design",
         description: "A collection of my best paintings and drawings.",
         technologies: ["Watercolor", "Digital Art", "Sketching"],
+        deviceType: "mobile",
+        bgColor: "#f0f0f0",
     },
     {
         id: 3,
@@ -24,6 +28,8 @@ const Menu = [
         category: "Coding",
         description: "A 3D interactive cube created with Three.js.",
         technologies: ["Three.js", "JavaScript", "3D Modeling"],
+        deviceType: "mobile",
+        bgColor: "#e8f4f8",
     },
 ];
 
