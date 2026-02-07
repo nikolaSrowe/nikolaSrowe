@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://nikolaSrowe.github.io/nikolaSrowe",
   "dependencies": {
+    "@floating-ui/react": "^0.27.16",
     "@react-three/drei": "^9.121.4",
     "@react-three/fiber": "^8.17.13",
     "@testing-library/jest-dom": "^5.17.0",

@@ -3,14 +3,6 @@ import React from 'react';
 const HeaderSocials = () => {
   return (
     <div className="home__socials">
-      <a
-        href="https://www.instagram.com/nikolarowe/?igsh=amx2dnVucDM3NGk3&utm_source=qr"
-        className="home__socials-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fa-brands fa-instagram"></i>
-      </a>
 
       <a
         href="https://github.com/nikolaSrowe"

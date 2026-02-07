@@ -1,41 +1,76 @@
 import React from 'react';
 import "./about.css";
+import montrealPic from '../../assets/montrealPic.JPG';
+import dinoIcon from '../../assets/dino.png';
 import HeaderSocials from '../home/HeaderSocials';
 
 const About = () => {
     return (
-        <section className="about container section" id='about'>
-            <div className="about__socials spaced-socials">
-                <HeaderSocials />
-            </div>
-
-            <h2 className="section__title">About Me</h2>
-
+        <section className="about container section" id="about">
             <div className="about__content">
                 {/* Left: Text Content */}
                 <div className="about__text">
+                    {/* <h2 className="section__title">About</h2> */}
+                    <p className="about__greeting">Hi there!</p>
+                    <h2 className="about__name">I'm Nikola</h2>
+                    
                     <p className="about__description spaced">
-                        I'm a passionate CS student looking to contribute to the tech world by building technology that solves 
-                        real problems for real people. I love creating solutions that are both functional and meaningful, 
-                        finding an abstract blend of humanity and machine.
+                        I'm a passionate CS student looking to contribute to the tech world. I love creating solutions that are both functional and meaningful, 
+                        finding an abstract blend of humanity and machine. 
                     </p>
                     
                     <p className="about__description spaced">
-                        Beyond coding, I love spending my time artistically through drawing, visual design, and reading, finding 
-                        inspiration beyond just code. My love for knowledge has drawn me to philosophy, history, and research, 
-                        seeking perspectives that push me to think beyond the obvious.
+                        Beyond coding, you'll find me spending my time with my nose in a book, crafting on MC, or relaxing 
+                        in the Howling Abyss. My love for knowledge has drawn me to philosophy, history, and research, that help
+                        seek perspectives that push me to think beyond the obvious. 
                     </p>
-          
+
+                    <p className="about__description spaced">
+                        That being said, my Git commits can tell you more about me than I can.
+                    </p>
+
+                    {/* Social Links */}
+                    <div className="about__socials">
+                        <HeaderSocials />
+                    </div>
                 </div>
 
-                <div className="about__card">
-                    <h3 className="about__card-title">Quick Facts</h3>
-                    <ul className="about__card-list">
-                        <li><span className="icon">⌨️</span> Keeb Enthusiast</li>
-                        <li><span className="icon">📚</span> Bookworm</li>
-                        <li><span className="icon">🎨</span> UI/UX Passionate</li>
-                        <li><span className="icon">✔️</span> Never missed a semicolon</li>
-                    </ul>
+                {/* Right: Profile Picture */}
+                <div className="about__image">
+                    <img src={montrealPic} alt="Nikola in Montreal" className="about__img" />
+                </div>
+            </div>
+
+            {/* Facts Section - Below text and image */}
+            <div className="about__facts">
+                <div className="facts__column">
+                    <div className="fact__item">
+                        <img src={dinoIcon} alt="icon" className="fact__icon" />
+                        <span>Media & Graphic Designer for UBCO SEAC</span>
+                    </div>
+                    <div className="fact__item">
+                        <img src={dinoIcon} alt="icon" className="fact__icon" />
+                        <span>Bookworm (Please leave Recs!)</span>
+                    </div>
+                    <div className="fact__item">
+                        <img src={dinoIcon} alt="icon" className="fact__icon" />
+                        <span>important </span>
+                    </div>
+                </div>
+
+                <div className="facts__column">
+                    <div className="fact__item">
+                        <img src={dinoIcon} alt="icon" className="fact__icon" />
+                        <span>Healthcare, Software, Network Passionate</span>
+                    </div>
+                    <div className="fact__item">
+                        <img src={dinoIcon} alt="icon" className="fact__icon" />
+                        <span>Keyboard Enthusiast (Creamy &gt; Clicky)</span>
+                    </div>
+                    <div className="fact__item">
+                        <img src={dinoIcon} alt="icon" className="fact__icon" />
+                        <span>Another one more</span>
+                    </div>
                 </div>
             </div>
         </section>
