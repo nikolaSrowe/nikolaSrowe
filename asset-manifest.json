@@ -1,36 +1,20 @@
 {
   "files": {
-    "main.css": "/nikolaSrowe/static/css/main.cbc4ca5d.css",
-    "main.js": "/nikolaSrowe/static/js/main.f02d686d.js",
+    "main.css": "/nikolaSrowe/static/css/main.3e078478.css",
+    "main.js": "/nikolaSrowe/static/js/main.3fea960e.js",
+    "static/media/montrealPic.JPG": "/nikolaSrowe/static/media/montrealPic.b1ad04cb102da4d8087a.JPG",
     "static/media/gardenPic.jpg": "/nikolaSrowe/static/media/gardenPic.e06c280b96d0e8f802c6.jpg",
     "static/media/cafePic.jpg": "/nikolaSrowe/static/media/cafePic.39c61afd4694d142ae7b.jpg",
     "static/media/boatPic.jpg": "/nikolaSrowe/static/media/boatPic.ceb51c285b497140a8fc.jpg",
     "static/media/tubingPic.jpg": "/nikolaSrowe/static/media/tubingPic.b2264f195a5e4d05475f.jpg",
-    "static/media/artw_1.png": "/nikolaSrowe/static/media/artw_1.ffb7821fa71aa70146f6.png",
-    "static/media/artw_3.png": "/nikolaSrowe/static/media/artw_3.0a7c1d420812f1e150c5.png",
-    "static/media/medit.jpg": "/nikolaSrowe/static/media/medit.06bf28e159b04d0460d4.jpg",
-    "static/media/artw_2.jpg": "/nikolaSrowe/static/media/artw_2.42117044ba3a3758a373.jpg",
-    "static/media/bookshelf.svg": "/nikolaSrowe/static/media/bookshelf.33c2578ee23a303e8fdf78b4df6c2688.svg",
-    "static/media/react.svg": "/nikolaSrowe/static/media/react.f57b349b4d9df56c9b48c916a8d5adfb.svg",
-    "static/media/nodejs.svg": "/nikolaSrowe/static/media/nodejs.51fb0cf6ccda653f867a587bb90cc9c6.svg",
-    "static/media/docker.svg": "/nikolaSrowe/static/media/docker.47a900dbbbbe13dbe7c3171049ec68c8.svg",
-    "static/media/mongo.svg": "/nikolaSrowe/static/media/mongo.eb842895e80bd61dd471f2b70345feab.svg",
-    "static/media/javalogo.svg": "/nikolaSrowe/static/media/javalogo.2d3d0365efcb2024498b2136e324fca5.svg",
-    "static/media/javascriptlogo.svg": "/nikolaSrowe/static/media/javascriptlogo.0866c81b3b841c647e23b8a5d991c312.svg",
-    "static/media/python.svg": "/nikolaSrowe/static/media/python.a3234e7b1423b66cd5dbe9d2a3a17c6d.svg",
-    "static/media/git.svg": "/nikolaSrowe/static/media/git.71a5b8fe639ba6f15b928a1e108adfe6.svg",
-    "static/media/artpal.svg": "/nikolaSrowe/static/media/artpal.5be8b39d942fcb2424eef257cef1b045.svg",
-    "static/media/neko.svg": "/nikolaSrowe/static/media/neko.26d16ef7ae3716d51f0a7bb5d81d7c9d.svg",
-    "static/media/figma.svg": "/nikolaSrowe/static/media/figma.917df0f3e2774f002cbe8ae90f904f42.svg",
+    "static/media/court-lady.jpg": "/nikolaSrowe/static/media/court-lady.853dc6753908922aef49.jpg",
     "index.html": "/nikolaSrowe/index.html",
     "static/media/work-1.svg": "/nikolaSrowe/static/media/work-1.25b5c498afc78c60e9fa29dcc2230190.svg",
-    "static/media/css-3.svg": "/nikolaSrowe/static/media/css-3.315b8fdb9dbf75ae965b80bf368895cd.svg",
-    "static/media/html-5.svg": "/nikolaSrowe/static/media/html-5.0107c93943a8f415b5db64ebb0a9d12d.svg",
-    "main.cbc4ca5d.css.map": "/nikolaSrowe/static/css/main.cbc4ca5d.css.map",
-    "main.f02d686d.js.map": "/nikolaSrowe/static/js/main.f02d686d.js.map"
+    "main.3e078478.css.map": "/nikolaSrowe/static/css/main.3e078478.css.map",
+    "main.3fea960e.js.map": "/nikolaSrowe/static/js/main.3fea960e.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbc4ca5d.css",
-    "static/js/main.f02d686d.js"
+    "static/css/main.3e078478.css",
+    "static/js/main.3fea960e.js"
   ]
 }
