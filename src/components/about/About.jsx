@@ -15,7 +15,7 @@ const About = () => {
                     <h2 className="about__name">I'm Nikola</h2>
                     
                     <p className="about__description spaced">
-                        I'm a passionate CS student looking to contribute to the tech world. I love creating solutions that are both functional and meaningful, 
+                        I'm a passionate CS graduate looking to contribute to the tech world. I love creating solutions that are both functional and meaningful, 
                         finding an abstract blend of humanity and machine. 
                     </p>
                     
@@ -54,7 +54,7 @@ const About = () => {
                     </div>
                     <div className="fact__item">
                         <img src={dinoIcon} alt="icon" className="fact__icon" />
-                        <span>important </span>
+                        <span>University of British Columbia, B.Sc. Science</span>
                     </div>
                 </div>
 
@@ -65,11 +65,11 @@ const About = () => {
                     </div>
                     <div className="fact__item">
                         <img src={dinoIcon} alt="icon" className="fact__icon" />
-                        <span>Keyboard Enthusiast (Creamy &gt; Clicky)</span>
+                        <span>Keyboard Enthusiast (Thocky is best)</span>
                     </div>
                     <div className="fact__item">
                         <img src={dinoIcon} alt="icon" className="fact__icon" />
-                        <span>Another one more</span>
+                        <span>Spicy food fan with no tolerance</span>
                     </div>
                 </div>
             </div>

@@ -12,17 +12,18 @@ const Contact = () => {
             <div className="contact__content">
                 <h2 className="section__title">Say Hi!</h2>
                 <p className="contact__details">
-                    Connect to chat about projects, collaboration, or just say hi, I'd love to hear from you!
+                    Connect to chat about projects, collaboration, or just say hi, I'd love to hear from you! 
                 </p>
+                <p className="contact__details">(Job prospects are also welcome ^_^)</p>
             </div>
 
             {/* Contact information */}
-            <div className="contact__info">
+            {/* <div className="contact__info">
                 <p className="contact__label">Email:</p>
                 <a href="mailto:nsrowe14@yahoo.ca" className="contact__link">
                     nsrowe14@yahoo.ca
                 </a>
-            </div>
+            </div> */}
 
             {/* Social links */}
             <div className="contact__socials">
